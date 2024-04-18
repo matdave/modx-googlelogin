@@ -15,6 +15,15 @@ class OnManagerLoginFormRender extends Event
         }
         $this->modx->controller->addLexiconTopic('googlelogin:default');
         $css = '<link href="'. $this->glog->options['cssUrl'] .'googlelogin.css" rel="stylesheet"/>';
+        $js = '<script src="'. $this->glog->options['jsUrl'] .'googlelogin.js"></script>';
+        $invoke = '';
+        if ($this->glog->getOption('disable_regular_login')) {
+            //$invoke.= 'removeLoginOptions();';
+        }
+        $scripts = <<<HTML
+<script>document.addEventListener("DOMContentLoaded", function() { {$invoke} });</script>
+HTML;
+
         $message = '';
         if (isset($_GET['glog']) && in_array($_GET['glog'], ['success', 'fail'])) {
             $message = $this->modx->lexicon('googlelogin.glog_' . htmlentities($_GET['glog']));
@@ -23,6 +32,6 @@ class OnManagerLoginFormRender extends Event
             $message = $this->modx->lexicon('googlelogin.glog_signup');
         }
         $loginURL = $this->glog->client->createAuthUrl();
-        $this->modx->event->_output = "$css $message <a href=$loginURL class=\"c-button google\" >".$this->modx->lexicon('googlelogin.login_with_google')."</a>";
+        $this->modx->event->output("$js$css $message <a href=$loginURL class=\"c-button google\" >".$this->modx->lexicon('googlelogin.login_with_google')."</a> $scripts");
     }
 }

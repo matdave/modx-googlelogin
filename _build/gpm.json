@@ -14,7 +14,8 @@
       "file": "Login.php",
       "events": [
         "OnManagerLoginFormRender",
-        "OnManagerLogout"
+        "OnManagerLogout",
+        "OnBeforeManagerLogin"
       ]
     }
   ],
@@ -26,6 +27,12 @@
     {
       "key": "client_secret",
       "area": "API"
+    },
+    {
+      "key": "disable_regular_login",
+      "area": "Security",
+      "type": "combo-boolean",
+      "value": "0"
     },
     {
       "key": "allow_signup",

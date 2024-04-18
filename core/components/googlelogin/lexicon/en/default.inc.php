@@ -7,6 +7,7 @@ $_lang['googlelogin.glog_success'] = '<p class="is-success">Successfully logged 
 $_lang['googlelogin.glog_fail'] = '<p class="is-error">Error logging in with Google</p>';
 $_lang['googlelogin.glog_signup'] = '<p class="is-success">You have signed up and a manager will review your access.</p>';
 $_lang['googlelogin.login_with_google'] = 'Login with Google';
+$_lang['googlelogin.disable_regular_login'] = 'Regular login is disabled';
 
 $_lang['googlelogin.email.subject'] = 'New manager signed up with Google';
 $_lang['googlelogin.email.body'] = 'New manager signed up on [[+site_name]] with Google: [[+email]]';
@@ -29,4 +30,6 @@ $_lang['setting_googlelogin.default_group'] = 'Default group';
 $_lang['setting_googlelogin.default_group_desc'] = 'Default group for new signups.';
 $_lang['setting_googlelogin.default_role'] = 'Default Role';
 $_lang['setting_googlelogin.default_role_desc'] = 'Default Role for new signups.';
+$_lang['setting_googlelogin.disable_regular_login'] = 'Disable regular login';
+$_lang['setting_googlelogin.disable_regular_login_desc'] = 'Disable the regular login form options.';
 
