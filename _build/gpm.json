@@ -1,0 +1,73 @@
+{
+  "name": "Google Login",
+  "lowCaseName": "googlelogin",
+  "description": "Google Login for MODX Revolution 3.x",
+  "author": "matdave",
+  "version": "0.0.1-pl",
+  "menus": [
+  ],
+  "snippets": [
+  ],
+  "plugins": [
+    {
+      "name": "Google Login",
+      "file": "Login.php",
+      "events": [
+        "OnManagerLoginFormRender",
+        "OnManagerLogout"
+      ]
+    }
+  ],
+  "systemSettings": [
+    {
+      "key": "client_id",
+      "area": "API"
+    },
+    {
+      "key": "client_secret",
+      "area": "API"
+    },
+    {
+      "key": "allow_signup",
+      "area": "Security",
+      "type": "combo-boolean",
+      "value": "0"
+    },
+    {
+      "key": "allow_signup_domains",
+      "area": "Security"
+    },
+    {
+      "key": "allow_signup_active",
+      "area": "Security",
+      "type": "combo-boolean",
+      "value": "0"
+    },
+    {
+      "key": "allow_signup_notify",
+      "area": "Security"
+    },
+    {
+      "key": "allow_match_by_email",
+      "area": "Security",
+      "type": "combo-boolean",
+      "value": "0"
+    },
+    {
+      "key": "default_group",
+      "area": "Security"
+    },
+    {
+      "key": "default_role",
+      "area": "Security",
+      "value": "Member"
+    }
+  ],
+  "build" : {
+    "scriptsAfter": [
+      "acls.php"
+    ]
+  },
+  "dependencies": [
+  ]
+}

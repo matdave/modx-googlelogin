@@ -1,0 +1,11 @@
+.c-button.google {
+    background-color:#1a73e8;
+    border-color:#174ea6;
+}
+.c-button.google:active,
+.c-button.google:focus,
+.c-button.google:hover {
+    background-color:#174ea6;
+    opacity: 1;
+    color: white;
+}

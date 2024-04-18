@@ -1,0 +1,31 @@
+{
+  "name": "matdave/googlelogin",
+  "description": "Google Login MODX Revolution 3.x",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mat Jones",
+      "email": "mat@modx.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MODX\\GoogleLogin\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.4.0",
+    "google/apiclient": "^2.15"
+  },
+  "require-dev": {
+    "modx/revolution": "^3.0"
+  },
+  "scripts": {
+    "post-update-cmd": "Google\\Task\\Composer::cleanup"
+  },
+  "extra": {
+    "google/apiclient-services": [
+      "Oauth2"
+    ]
+  }
+}
