@@ -31,5 +31,5 @@ $_lang['setting_googlelogin.default_group_desc'] = 'Default group for new signup
 $_lang['setting_googlelogin.default_role'] = 'Default Role';
 $_lang['setting_googlelogin.default_role_desc'] = 'Default Role for new signups.';
 $_lang['setting_googlelogin.disable_regular_login'] = 'Disable regular login';
-$_lang['setting_googlelogin.disable_regular_login_desc'] = 'Disable the regular login form options.';
+$_lang['setting_googlelogin.disable_regular_login_desc'] = 'Disable the regular login form options. (Warning: this will disable the regular login form for all users.)';
 
