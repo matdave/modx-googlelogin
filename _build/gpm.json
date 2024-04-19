@@ -72,8 +72,8 @@
     }
   ],
   "build" : {
-    "changelog": "changelog.txt",
-    "readme": "readme.txt",
-    "license": "license.txt"
+    "changelog": "core/components/googlelogin/docs/changelog.txt",
+    "readme": "core/components/googlelogin/docs/readme.txt",
+    "license": "core/components/googlelogin/docs/license.txt"
   }
 }
