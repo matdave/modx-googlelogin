@@ -72,9 +72,6 @@
     }
   ],
   "build" : {
-    "scriptsAfter": [
-      "acls.php"
-    ],
     "changelog": "changelog.txt",
     "readme": "readme.txt",
     "license": "license.txt"
