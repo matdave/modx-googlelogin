@@ -3,7 +3,7 @@
   "lowCaseName": "googlelogin",
   "description": "Google Login for MODX Revolution 3.x",
   "author": "matdave",
-  "version": "0.0.1-pl",
+  "version": "1.0.0-pl",
   "menus": [
   ],
   "snippets": [
@@ -15,7 +15,8 @@
       "events": [
         "OnManagerLoginFormRender",
         "OnManagerLogout",
-        "OnBeforeManagerLogin"
+        "OnBeforeManagerLogin",
+        "OnManagerPageBeforeRender"
       ]
     }
   ],

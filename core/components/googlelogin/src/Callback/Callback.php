@@ -87,7 +87,7 @@ class Callback
             return;
         } elseif ($this->modx->user->isAuthenticated('mgr')) {
             $this->addUserSetting($this->modx->user->get('id'), $user->id);
-            $this->sendManager(true);
+            $this->sendManager(true, ['a' => 'security/profile']);
             return;
         }
         if ($this->modx->getOption('googlelogin.allow_match_by_email', null, false)) {
@@ -171,7 +171,7 @@ class Callback
             'internalKey' => $newUser->get('id'),
             'fullname' => $user->givenName . ' ' . $user->familyName,
             'email' => $user->getEmail(),
-            'photo' => $user->picture,
+            //'photo' => $user->picture,
         ])->save();
         $notify = $this->modx->getOption('googlelogin.allow_signup_notify', null, '');
         $notify = explode(',', $notify);

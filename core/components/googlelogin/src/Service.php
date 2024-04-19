@@ -85,10 +85,11 @@ class Service
             $redirectUri = rtrim($this->modx->getOption('site_url'), '/') . '/' . ltrim($redirectUri, '/');
         }
         $this->client = new Client();
-        $this->client->setApplicationName('MODX Google Login');
+        $this->client->setApplicationName($this->modx->getOption('site_name') . ' Google Login');
         $this->client->setClientId($clientId);
         $this->client->setClientSecret($clientSecret);
         $this->client->setRedirectUri($redirectUri);
         $this->client->setScopes(['email', 'profile']);
+        $this->client->setPrompt('select_account');
     }
 }

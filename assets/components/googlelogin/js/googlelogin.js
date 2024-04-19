@@ -1,12 +1,9 @@
-const removeLoginOptions = () => {
-    const form = document.getElementById('modx-login-form');
-    form.querySelectorAll('input').forEach((input) => {
-        input.remove();
-    });
-    form.querySelectorAll('label').forEach((label) => {
-        label.remove();
-    });
-    form.querySelectorAll('button').forEach((button) => {
-        button.remove();
-    });
-}
+var GoogleLogin = function (config){
+    config = config || {};
+    GoogleLogin.superclass.constructor.call(this, config);
+};
+Ext.extend(GoogleLogin, Ext.Component, {
+    config: {},
+});
+Ext.reg('googlelogin', GoogleLogin);
+googlelogin = new GoogleLogin();

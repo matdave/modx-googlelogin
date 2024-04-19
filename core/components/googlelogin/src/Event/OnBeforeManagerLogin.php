@@ -10,10 +10,14 @@ class OnBeforeManagerLogin extends Event
         if (empty($this->glog->client)) {
             return;
         }
-        $this->modx->event->output(
-            $this->glog->getOption('disable_regular_login') ?
-                $this->modx->lexicon('googlelogin.disable_regular_login') :
-                null
-        );
+        if ($this->glog->getOption('disable_regular_login')) {
+            $loginURL = $this->glog->client->createAuthUrl();
+            if (!empty($loginURL)) {
+                $this->modx->sendRedirect($loginURL);
+            }
+            $this->modx->event->output(
+                    $this->modx->lexicon('googlelogin.disable_regular_login')
+            );
+        }
     }
 }

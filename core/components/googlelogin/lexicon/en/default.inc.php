@@ -7,7 +7,10 @@ $_lang['googlelogin.glog_success'] = '<p class="is-success">Successfully logged 
 $_lang['googlelogin.glog_fail'] = '<p class="is-error">Error logging in with Google</p>';
 $_lang['googlelogin.glog_signup'] = '<p class="is-success">You have signed up and a manager will review your access.</p>';
 $_lang['googlelogin.login_with_google'] = 'Login with Google';
+$_lang['googlelogin.connect_google'] = 'Connect Google Account';
+$_lang['googlelogin.disconnect_google'] = 'Disconnect Google Account';
 $_lang['googlelogin.disable_regular_login'] = 'Regular login is disabled';
+$_lang['googlelogin.disable_regular_login_warning'] = '<h2 class="warning">Warning</h2><p>Regular login is disabled. <a href="[[+link]]">Please connect your account on your profile page.</a></p>';
 
 $_lang['googlelogin.email.subject'] = 'New manager signed up with Google';
 $_lang['googlelogin.email.body'] = 'New manager signed up on [[+site_name]] with Google: [[+email]]';
